@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <script>
+               document.addEventListener('DOMContentLoaded', function() {
+                let input = document.querySelector('input');
+                input.addEventListener('keyup', function(event) {
+                    let name = document.querySelector('#greeting');
+                    if (input.value) {
+                        name.innerHTML = `Hello, ${input.value}`;
+                    }
+                    else {
+                        name.innerHTML = 'hello, whoever you are';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body class ="center">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Mahmoud</a>
+
+        <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="space.html">Space</a>
+            <a class="nav-link" href="programming.html">Programming</a>
+        </div>
+    </div>
+    </nav>
+        <h1 class= "large">Mahmoud Amin</h1>
+        <h2 class= "medium">Welcome to my homepage</h2>
+        <p class = "medium"> &#169; 2026 mahmoud Amin </p>
+        <p>Hello! I'm Mahmoud Amin. I love space, programming and improving my skills.</p>
+        <p>so, what's your name?</p>
+               <input autocomplete="off" autofocus placeholder="Name" type="text">
+               <p id = "greeting">Hello, whoever you are</p>
+    </body>
+</html>
